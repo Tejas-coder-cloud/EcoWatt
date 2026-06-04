@@ -2,71 +2,70 @@
 
 ## AI-Powered Home Energy Advisor
 
-EcoWatt is an intelligent energy management platform designed to help households analyze electricity consumption, reduce energy wastage, and encourage the adoption of renewable energy sources. The project supports **United Nations Sustainable Development Goal 7 (Affordable and Clean Energy)** by promoting energy efficiency and sustainable energy practices.
+EcoWatt is an intelligent energy management platform designed to help households monitor electricity consumption, reduce energy wastage, and encourage the adoption of renewable energy solutions. The project supports **United Nations Sustainable Development Goal 7 (Affordable and Clean Energy)** by promoting energy efficiency and sustainable energy practices.
 
 ---
 
-## SDG Alignment
+## 🌍 SDG Alignment
 
-### United Nations Sustainable Development Goal 7
+### SDG 7: Affordable and Clean Energy
 
-**Affordable and Clean Energy**
-
-EcoWatt helps users:
-
-* Understand household electricity consumption.
-* Identify high energy-consuming appliances.
-* Reduce electricity bills through personalized recommendations.
-* Estimate carbon footprint.
-* Evaluate the feasibility of adopting rooftop solar energy.
+Millions of households are unaware of how much energy they consume and which appliances contribute the most to their electricity bills. EcoWatt addresses this issue by providing energy insights, personalized recommendations, carbon footprint estimation, and solar energy guidance.
 
 ---
 
-## Problem Statement
+## 🚀 Live Demo
 
-Many households are unaware of how much electricity individual appliances consume, resulting in:
+**Streamlit Application:**
+https://ecowatt-l8dn9hv8kzqupshqvbtpnh.streamlit.app/
+
+---
+
+## 📌 Problem Statement
+
+Many households face:
 
 * High electricity bills
-* Energy wastage
-* Increased carbon emissions
+* Energy wastage due to inefficient usage
+* Lack of awareness about carbon emissions
 * Low adoption of renewable energy solutions
 
-There is a need for an intelligent system that can provide insights into energy consumption patterns and suggest practical ways to improve energy efficiency.
+There is a need for an intelligent system that can analyze household energy usage and provide actionable recommendations for reducing consumption and promoting clean energy.
 
 ---
 
-## Solution
+## 💡 Solution
 
-EcoWatt provides a user-friendly dashboard where users can enter appliance usage details and receive:
+EcoWatt enables users to:
 
-* Monthly energy consumption estimates
-* Electricity bill estimation
-* Appliance-wise energy breakdown
-* Carbon footprint analysis
-* AI-generated energy-saving recommendations
-* Solar panel recommendations with savings analysis
+* Calculate monthly electricity consumption
+* Estimate electricity bills
+* Analyze appliance-wise energy usage
+* Measure carbon footprint
+* Receive AI-powered energy-saving recommendations
+* Evaluate rooftop solar feasibility
 
 ---
 
-## Features
+## ✨ Features
 
 ### ⚡ Energy Analysis
 
-* Monthly electricity consumption calculation
-* Estimated electricity bill
+* Monthly electricity consumption estimation
+* Electricity bill prediction
 * Dynamic energy efficiency score
 
 ### 📊 Energy Breakdown
 
-* Appliance-wise energy consumption analysis
+* Appliance-wise energy consumption
 * Interactive donut chart visualization
-* Detailed consumption table
+* Detailed consumption summary
 
 ### 🤖 AI Energy Advisor
 
-* Gemini-powered energy analysis
-* Personalized recommendations
-* Energy-saving suggestions
+* Powered by Google Gemini AI
+* Personalized energy-saving suggestions
+* Identification of major energy consumers
 * Solar adoption recommendations
 
 ### 🌍 Carbon Footprint Calculator
@@ -76,16 +75,15 @@ EcoWatt provides a user-friendly dashboard where users can enter appliance usage
 
 ### ☀️ Solar Advisor
 
-* Recommended solar capacity
+* Recommended solar plant capacity
 * Installation cost estimation
-* Annual savings prediction
+* Annual savings calculation
 * CO₂ reduction estimation
-* Solar feasibility assessment
-* Payback period calculation
+* Payback period analysis
 
 ---
 
-## Technology Stack
+## 🛠 Technology Stack
 
 ### Frontend
 
@@ -95,11 +93,11 @@ EcoWatt provides a user-friendly dashboard where users can enter appliance usage
 
 * Python
 
-### Data Processing
+### Data Analysis
 
 * Pandas
 
-### Visualization
+### Data Visualization
 
 * Plotly
 
@@ -113,7 +111,7 @@ EcoWatt provides a user-friendly dashboard where users can enter appliance usage
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
 EcoWatt/
@@ -126,77 +124,52 @@ EcoWatt/
 ├── README.md
 ├── .gitignore
 │
-├── .streamlit/
-│   └── config.toml
-│
-└── screenshots/
+└── .streamlit/
+    └── config.toml
 ```
 
 ---
 
-## Installation
+## ⚙️ How It Works
 
-Clone the repository:
-
-```bash
-git clone <repository-url>
-cd EcoWatt
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Create a `.env` file:
-
-```env
-GEMINI_API_KEY=YOUR_API_KEY
-```
-
-Run the application:
-
-```bash
-python -m streamlit run app.py
-```
+1. User enters appliance details and daily usage hours.
+2. EcoWatt calculates monthly electricity consumption.
+3. Estimated electricity bill is generated.
+4. Appliance-wise energy consumption is visualized.
+5. Carbon footprint is estimated.
+6. Gemini AI analyzes consumption patterns.
+7. Personalized recommendations are generated.
+8. Solar energy feasibility and savings are calculated.
 
 ---
 
-## How It Works
+## 🔮 Future Scope
 
-1. User enters appliance details and daily usage.
-2. EcoWatt calculates monthly energy consumption.
-3. Electricity bill and energy score are generated.
-4. Carbon footprint is estimated.
-5. Gemini AI analyzes usage patterns.
-6. Personalized recommendations are provided.
-7. Solar suitability and savings are calculated.
-
----
-
-## Future Scope
-
-* User authentication
-* MongoDB integration
 * Historical energy tracking
+* MongoDB integration
 * PDF report generation
 * Smart meter integration
 * IoT-based real-time monitoring
-* Mobile application support
+* Mobile application development
 
 ---
 
-## Impact
+## 🌱 Impact
 
-EcoWatt encourages responsible energy consumption and promotes renewable energy adoption. By helping users understand their energy usage patterns, the platform contributes towards a more sustainable and energy-efficient future.
+EcoWatt encourages responsible energy consumption and supports the adoption of renewable energy sources. By helping users understand their energy usage patterns, the platform contributes towards a more sustainable and energy-efficient future.
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Tejas Dhatrak**
 
 Electronics and Telecommunication Engineering (EXTC)
 
 Veermata Jijabai Technological Institute (VJTI)
+
+---
+
+## 📜 License
+
+This project was developed for academic and educational purposes.
