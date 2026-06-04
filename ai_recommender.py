@@ -1,51 +1,98 @@
+# ai_recommender.py
+
 from dotenv import load_dotenv
 import google.generativeai as genai
 import os
-# Load environment variables
+
+# Load .env file
 load_dotenv()
-# Configure Gemini API
+
+# Get API key
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    raise ValueError(
+        "GEMINI_API_KEY not found in .env file"
+    )
+
+# Configure Gemini
 genai.configure(
-    api_key=os.getenv("GEMINI_API_KEY")
+    api_key=api_key
 )
-# Load Gemini model
+
+# Create model
 model = genai.GenerativeModel(
-    "gemini-2.5-flash"
+    "gemini-1.5-flash"
 )
+
+
 def generate_recommendations(result):
+
     prompt = f"""
-    You are an expert Home Energy Consultant.
-    Analyze the following household energy data:
-    Monthly Consumption:
-    {result['Total']} kWh
-    Estimated Monthly Bill:
-    ₹{result['Bill']}
-    Appliance Breakdown:
-    AC:
-    {result['AC']} kWh
-    Fans:
-    {result['Fans']} kWh
-    Refrigerator:
-    {result['Fridge']} kWh
-    TV:
-    {result['TV']} kWh
-    LEDs:
-    {result['LEDs']} kWh
-    Provide:
-    1. A short analysis of the household's energy usage.
-    2. The top energy-consuming appliances.
-    3. 5 personalized energy-saving recommendations.
-    4. Estimated monthly savings.
-    5. Whether solar panels are recommended
-    Keep the response concise and user-friendly.
-    """
+You are an expert Home Energy Consultant.
+
+Analyze the following household energy usage data and provide concise recommendations.
+
+Monthly Consumption:
+{result['Total']} kWh
+
+Estimated Monthly Bill:
+₹{result['Bill']}
+
+Appliance Breakdown:
+
+AC:
+{result['AC']} kWh
+
+Fans:
+{result['Fans']} kWh
+
+Fridge:
+{result['Fridge']} kWh
+
+TV:
+{result['TV']} kWh
+
+LEDs:
+{result['LEDs']} kWh
+
+Provide your response in Markdown format using:
+
+# Analysis
+
+# Top Energy Consumers
+
+# Recommendations
+
+# Estimated Savings
+
+# Solar Advice
+
+Keep the response concise and practical.
+"""
+
     try:
+
+        print("Sending request to Gemini...")
+
         response = model.generate_content(
             prompt
         )
+
+        print("Response received!")
+
         return response.text
+
     except Exception as e:
+
+        print("ERROR:", e)
+
         return f"""
-        Unable to generate recommendations.
-        Error:
-        {str(e)}
-        """
+# Error
+
+Unable to generate recommendations.
+
+Details:
+
+{str(e)}
+"""

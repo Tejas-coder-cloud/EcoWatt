@@ -291,12 +291,20 @@ elif menu == "AI Advisor":
         st.metric(" 🌍  Yearly carbon footprint",f"{round(carbon*12,2)} kg CO₂")
     with st.container():
         if st.button("⚡ Analyze My Home"):
-            with st.spinner(
-            "Analyzing your energy consumption..."
-        ):
-                recommendations = generate_recommendations(
-                result
+            try:
+                with st.spinner(
+                "Analyzing your energy consumption..."
+            ):
+                    recommendations = generate_recommendations(
+                    result
+                )
+                st.markdown("### 📋 AI Analysis")
+                st.markdown(recommendations)
+            except Exception as e:
+                st.error(
+                f"Error: {str(e)}"
             )
-            st.markdown("### 📋 AI Analysis")    
-            st.markdown(recommendations)
+
+
+
     
